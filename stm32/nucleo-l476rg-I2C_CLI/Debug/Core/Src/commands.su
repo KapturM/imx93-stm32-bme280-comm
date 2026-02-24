@@ -1,3 +1,0 @@
-../Core/Src/commands.c:16:6:Commands_Init	16	static
-../Core/Src/commands.c:21:13:Commands_Execute	224	static
-../Core/Src/commands.c:74:6:Commands_Process	16	static

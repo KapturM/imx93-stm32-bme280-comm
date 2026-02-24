@@ -4,7 +4,7 @@ stm32/.settings/
 stm32/.recovery/
 
 # Build outputs
-stm32/Debug/
+stm32/nucleo-l476rg-I2C_CLI/Debug/
 stm32/Release/
 stm32/*.elf
 stm32/*.hex
@@ -18,4 +18,4 @@ stm32/*.swp
 
 # OS-specific
 stm32/.DS_Store
-stm32/Thumbs.db
+Thumbs.db

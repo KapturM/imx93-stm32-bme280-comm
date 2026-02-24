@@ -1,8 +1,0 @@
-../Core/Src/BME280.c:17:26:BME_ReadReg	1
-../Core/Src/BME280.c:22:26:BME_WriteReg	1
-../Core/Src/BME280.c:29:13:BME_ReadCalibrationData	1
-../Core/Src/BME280.c:65:19:BME280_Init	3
-../Core/Src/BME280.c:91:19:BME280_ReadAll	3
-../Core/Src/BME280.c:158:7:BME280_ReadTemperature	1
-../Core/Src/BME280.c:163:7:BME280_ReadPressure	1
-../Core/Src/BME280.c:168:7:BME280_ReadHumidity	1

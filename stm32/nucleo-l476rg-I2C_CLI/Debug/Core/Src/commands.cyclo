@@ -1,3 +1,0 @@
-../Core/Src/commands.c:16:6:Commands_Init	1
-../Core/Src/commands.c:21:13:Commands_Execute	6
-../Core/Src/commands.c:74:6:Commands_Process	3
