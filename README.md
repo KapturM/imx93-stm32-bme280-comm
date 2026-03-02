@@ -1,17 +1,24 @@
 # i.MX 93 and STM32 Sensor Communication
-*README WORK IN PROGRESS* 
-FRDM i.MX93 runs Linux and connects through UART to Nucleo L476RG. Sends commands that are interpreted by STM32 and response is sent back. STM32 is connected with I2C to BME280.
+This project consists of two boards, FRDM i.MX93 running Linux and STM32 Nucleo L476RG. STM32 is connected with I2C to BME280 Temperature sensor to gather data. Command system is implemented on STM32, commands can be sent over UART to exchange data from STM32 to i.MX93.
 
-Hardware used:
-* FRDM i.MX 93
-* STM32 Nucleo L476RG
-* BME280
+<br>
+<div align="center">
+    <img src="imx-stm-boards.jpg" width="600"/>
+    <img src="frdm-imx93/imx93_debug_stm_commands.jpg" width="600"/>
+</div>
+<br>
+
+Hardware used:\
+FRDM i.MX 93\
+STM32 Nucleo L476RG\
+BME280 Tempereture Humidity and Pressure sensor\
+Computer running Ubuntu 24.04
 
 Each board subfolder discusses indepth their respective sections.\
-frdm-imx93 - UART configuration in device tree using Yocto, \
-stm32* - UART and I2C configuration, commands implementation\
-*NOTE - this part is based on my older project, original can be found here. Some modifications were introduced.\
+***frdm-imx93** - UART configuration in device tree using Yocto*\
+***stm32** - UART and I2C configuration, BME280 driver and command system*
 
+Connection architecture:
 ```
     Linux                  No OS                Sensor
 +-----------+           +---------+           +--------+

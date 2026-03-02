@@ -1,15 +1,9 @@
 # STM32 Nucleo-L476RG – BME280 sensor and commands over Serial
-This project shows how to connect BME280 sensor with the STM32 over I2C and includes UART command system implementation.
+This part is based on one of my [projects](https://github.com/KapturM/STM32-Projects/tree/main/nucleo-l476rg-I2C_CLI), it includes some modifications (UART2 from debug ports was moved to UART3). Project implements STM32 connection with BME280 sensor over I2C and includes UART command system.
 
-This project uses a simple BME280 driver made by me based on the sensor manual, which can be found in References. It works by reading all the data regisers and saves the values. Then those values can be accessed using Read functions. Such solution allows to read the sensor periodically with maintaining a constant access to the data.
+BME280 driver was developed by me based on the sensor manual, which can be found in References. It works by reading all the data regisers and saving the values. Then those values can be accessed using Read functions. Such solution allows to read the sensor periodically with maintaining a constant access to the data.
 
 Commands are based on UART interrupt and callback. When an interrupt occurss, which is the recived command, then the given command is executed.
-
-Python script used for connecting over COM and command sending is included.
-
-<div align="center">
-    <img src="comTest_out.png" width="600"/>
-</div>
 
 ## BME280 Connection
 ```
@@ -71,9 +65,9 @@ PA5 has LD2[green_led] assigned.
 
 ### UART Configuration
 1. In .ioc file
-2. Pinout & Configuration -> Connectivity -> USART2
+2. Pinout & Configuration -> Connectivity -> USART3
 3. In the mode select Asynchronous
-4. To port PA2 assign USART_TX, to port PA3 assign USART_RX
+4. To port PC10 assign USART_TX, to port PC11 assign USART_RX
 5. Verify settings
 Below Asynchronous, make sure that Flow control is Disabled.\
 In Parameter Settings -> Basic Parameters:\
@@ -82,7 +76,7 @@ Data bits: 8\
 Stop bits: 1\
 Parity: None
 
-6. Go to NVIC Settings and Enable USART2 global interrupt
+6. Go to NVIC Settings and Enable USART3 global interrupt
 
 ## References
 BME280 Manual - https://www.adafruit.com/images/product-files/2652/2652.pdf
